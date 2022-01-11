@@ -1,4 +1,4 @@
-### 👉 [Project Link](https://ahlawataman.github.io/React-DashApp/)
+### 👉 [Project Link](https://ahlawataman.github.io/React-DashApp/) 👈
 
 # Getting Started with Create React App
 
