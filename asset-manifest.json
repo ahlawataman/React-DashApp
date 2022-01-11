@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-DashApp/static/css/main.10bf3ff1.css",
-    "main.js": "/React-DashApp/static/js/main.7b526f3e.js",
+    "main.js": "/React-DashApp/static/js/main.35dcc4fa.js",
     "static/media/profile_pic.png": "/React-DashApp/static/media/profile_pic.25444a619a2fa4ba649c.png",
     "index.html": "/React-DashApp/index.html",
     "main.10bf3ff1.css.map": "/React-DashApp/static/css/main.10bf3ff1.css.map",
-    "main.7b526f3e.js.map": "/React-DashApp/static/js/main.7b526f3e.js.map"
+    "main.35dcc4fa.js.map": "/React-DashApp/static/js/main.35dcc4fa.js.map"
   },
   "entrypoints": [
     "static/css/main.10bf3ff1.css",
-    "static/js/main.7b526f3e.js"
+    "static/js/main.35dcc4fa.js"
   ]
 }
