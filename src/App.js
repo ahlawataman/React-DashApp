@@ -19,7 +19,7 @@ import ProtectedRoutes from './pages/protectedRoutes/ProtectedRoutes'
 function App() {
 
   return (
-    <Router basename='/'>
+    <Router basename='/React-DashApp'>
 
     <Routes>
       <Route path='/' element={<Home/>}/>
