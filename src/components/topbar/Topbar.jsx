@@ -3,12 +3,33 @@ import './topbar.css'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import LanguageIcon from '@mui/icons-material/Language';
 import SettingsIcon from '@mui/icons-material/Settings';
-import img from '../../images/profile_pic.png';
+// import img from '../../images/profile_pic.png';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {auth, provider} from '../../firebase';
+import {useDispatch, useSelector} from 'react-redux'
+import {getProfilePhoto, setUserLogoutState} from '../../features/userSlice'
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 
 export default function Topbar() {
+
+    
+    const dispatch = useDispatch();
+
+    const handleSignOut = () => {
+        auth.signOut().then(() => {
+            dispatch(setUserLogoutState());
+        }).catch((err) => alert(err.message))
+        
+    }
+
+    const img = useSelector(getProfilePhoto);
+    console.log(img)
+
     return (
         <div className='topbar'>
             <div className="topbarWrapper">
@@ -29,7 +50,20 @@ export default function Topbar() {
                     <div className="topbarIconContainer">
                         <SettingsIcon/>
                     </div>
-                    <img src={img} alt="" className="topAvatar" />
+                    <PopupState className="topAvatar" variant="popover" popupId="demo-popup-menu">
+                    {(popupState) => (
+                        <React.Fragment>
+                            <Button {...bindTrigger(popupState)}>
+                                <img src={img} alt="" className="topAvatar" />
+                            </Button>
+                            <Menu {...bindMenu(popupState)}>
+                            <MenuItem onClick={popupState.close}>Profile</MenuItem>
+                            <MenuItem onClick={popupState.close}>My account</MenuItem>
+                            <MenuItem onClick={handleSignOut}>Logout</MenuItem>
+                            </Menu>
+                        </React.Fragment>
+                        )}
+                    </PopupState>
                 </div>
             </div>
         </div>

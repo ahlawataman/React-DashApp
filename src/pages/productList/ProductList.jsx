@@ -11,7 +11,7 @@ export default function ProductList() {
     const [data, setData] = useState(productRows)
 
     const handleDelete = (id) => {
-        setData(data.filter((item)=> item.id != id));
+        setData(data.filter((item)=> item.id !== id));
     }
 
     const columns = [

@@ -1,8 +1,90 @@
-.home {
-  flex: 4;
-}
+  .logo {
+    font-weight: bold;
+    font-size: 500px;
+    color: black;
+    cursor: pointer;
+  }
 
-.homeWidgets {
-  display: flex;
-  margin: 20px;
-}
+  button {
+    margin: 1rem;
+  }
+
+  .googleSignIn {
+    border: none;
+      border-radius: 2px;
+      background-color: #4285f4;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    display: flex;
+    padding: 1px;
+      color: #FFF;
+  }
+
+  .googleSignIn:hover {box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);}
+
+  .googleSignIn:active {background: #3367D6;}
+
+  .googleSignIn--white {
+    background: #FFF;
+    color: rgba(0,0,0,0.54);
+  }
+
+  .googleSignIn--white:active {
+    background: #EEEEEE;
+  }
+
+  .googleSignIn__text {
+    padding: 11px;
+    font-family: "Roboto";
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      text-align: left;
+    white-space: nowrap;
+  }
+
+  .home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #animation-demo {
+    margin: 30px auto;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    line-height: 150px;
+    color: #000;
+    text-align: center;
+  } 
+  
+  .animated {
+    color: #000;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count:3;
+    -webkit-animation-iteration-count:3;
+  }
+  
+  @-webkit-keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+      40% {-webkit-transform: translateY(-30px);} 
+      60% {-webkit-transform: translateY(-15px);} 
+  } 
+  
+  @keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+      40% {transform: translateY(-30px);} 
+      60% {transform: translateY(-15px);} 
+  } 
+  
+  .bounce { 
+      -webkit-animation-name: bounce; 
+      animation-name: bounce;
+  }
+  
